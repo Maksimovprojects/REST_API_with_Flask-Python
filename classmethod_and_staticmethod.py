@@ -16,8 +16,8 @@ class Vector:
     MIN_COORD = 0
     MAX_COORD = 100
 
-    def setCoords(self, x, y):
-        if Vector.validate(x) and Vector.validate(y):
+    def setCoords(self, x, y):  # method has access to all methods(@classmethod, @staticmethod) and class attributes
+        if Vector.validate(x) and Vector.validate(y):  # by the 'self' object has access to instance of class
             self.x = x
             self.y = y
 
@@ -27,6 +27,6 @@ class Vector:
             return True
         return False
 
-    @staticmethod
+    @staticmethod  # has not accessed to usual methods or @classmethod, or instance of class: v = Vector (2, 1)
     def norm2(x, y):
-        return x*x + y*y
+        return x * x + y * y
