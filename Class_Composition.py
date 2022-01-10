@@ -13,6 +13,10 @@ class Book:
     def __str__(self):
         return f"Book {self.name}"
 
+    def count(self, x, y):
+        return x + y
+
+
 
 book = Book("Harry Potter")
 book2 = Book("Python 101")
