@@ -2,7 +2,17 @@ from flask import Flask, jsonify
 
 app = Flask(__name__)
 
-stores = [{'name': 'My wonderful Store', 'items': [{'name': "My item", 'price': 15.99}]}]
+stores = [
+{
+  "name": "My wonderful Store",
+  "items": [
+    {
+      "name": "My item",
+      "price": 15.99
+    }
+  ]
+}
+]
 
 
 # POST - used to receive data
